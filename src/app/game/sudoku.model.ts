@@ -28,7 +28,7 @@ export class Level {
 }
 
 export const levels: Array<Level> = [
-  new Level('fast', 0.9, [1, 2, 3, 4, 5, 6], [2, 3], [3, 2]),
+  new Level('fast', 0.5, [1, 2, 3, 4, 5, 6], [2, 3], [3, 2]),
   new Level('easy', 0.75),
   new Level('medium', 0.5),
   new Level('hard', 0.4),
