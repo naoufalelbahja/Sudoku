@@ -1,0 +1,12 @@
+<div
+  class="d-flex flex-column border border-2 border-dark bg-white"
+  [style.height]="dimention + 'px'"
+  [style.width]="dimention + 'px'"
+>
+  <app-row
+    class="flex-fill"
+    *ngFor="let row of table; let y = index"
+    [row]="row"
+    [y]="y"
+  ></app-row>
+</div>

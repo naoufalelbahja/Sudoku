@@ -1,0 +1,16 @@
+<div class="overflow-auto p-1">
+  <div class="d-flex gap-2 flex-md-wrap">
+    <button
+      class="btn bg-blue-lt text-primary d-flex flex-column fs-2"
+      *ngFor="let element of elements"
+      [class.btn-hidden]="remaining(element) === 0"
+      (click)="onFill(element)"
+    >
+      {{ element }}
+
+      <small class="text-muted">
+        {{ remaining(element) }}
+      </small>
+    </button>
+  </div>
+</div>

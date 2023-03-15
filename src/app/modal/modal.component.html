@@ -1,0 +1,30 @@
+<div
+  [id]="name"
+  class="modal modal-blur fade"
+  data-bs-keyboard="false"
+  data-bs-backdrop="static"
+  #modal
+>
+  <div
+    class="modal-dialog modal-dialog-centered"
+    [class.modal-full-width]="fullWidth"
+    [class.modal-dialog-scrollable]="scrollable"
+    [class]="'modal-' + size"
+  >
+    <div class="modal-content">
+      <ng-content select=".modal-header"></ng-content>
+
+      <ng-content></ng-content>
+
+      <div class="modal-status" [class]="'bg-' + status" *ngIf="status"></div>
+
+      <ng-content select=".modal-body"></ng-content>
+
+      <ng-content select=".modal-footer"></ng-content>
+    </div>
+  </div>
+
+  <button class="d-none" data-bs-dismiss="modal" #closeButton></button>
+</div>
+
+<button class="d-none" data-bs-toggle="modal" #openButton>hello</button>

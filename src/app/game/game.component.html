@@ -1,0 +1,24 @@
+<div class="page-wrapper d-flex flex-column vh-100">
+  <app-header></app-header>
+
+  <app-pause></app-pause>
+
+  <div class="page-body flex-fill">
+    <div class="container-sm h-100">
+      <div class="d-flex flex-column flex-md-row gap-3 h-100">
+        <div
+          class="w-100 h-100 d-flex align-items-center justify-content-center justify-content-md-end"
+          #container
+        >
+          <div app-table [container]="container"></div>
+        </div>
+
+        <div class="h-md-100">
+          <app-footer></app-footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

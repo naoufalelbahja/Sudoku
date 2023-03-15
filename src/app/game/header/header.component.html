@@ -1,0 +1,51 @@
+<header class="navbar navbar-dark bg-primary">
+  <div class="container-sm">
+    <h1 class="mavbar-brand m-0 text-light">Sudoku</h1>
+
+    <button class="btn btn-icon btn-ghost-light" (click)="onPause()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        *ngIf="!pause"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <rect x="6" y="5" width="4" height="14" rx="1" />
+        <rect x="14" y="5" width="4" height="14" rx="1" />
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        *ngIf="pause"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M7 4v16l13 -8z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="container-tight">
+  <div class="navbar d-flex align-items-center justify-content-between">
+    <span>Mistakes: {{ mistakes }}</span>
+
+    <span app-timer></span>
+  </div>
+</div>
+<!--  -->

@@ -1,0 +1,25 @@
+.cell-filled {
+    color: var(--tblr-primary);
+}
+
+.cell-mistake {
+    color: var(--tblr-danger)
+}
+
+.cell-active {
+    background-color: var(--tblr-gray-100)
+}
+
+.cell-selected {
+    background-color: rgba(66, 153, 225, 0.5);
+}
+
+.right-border {
+    border-right-color: var(--tblr-dark) !important;
+    border-right-width: 2px !important;
+}
+
+.bottom-border {
+    border-bottom-color: var(--tblr-dark) !important;
+    border-bottom-width: 2px !important;
+}

@@ -1,0 +1,75 @@
+<div
+  class="container-tight vh-100 d-flex align-items-center justify-content-center"
+>
+  <div class="text-center text-light">
+    <h1 class="display-6 mb-2">Welcome to Sudoku!</h1>
+
+    <p class="fs-2 lh-2">
+      This is a Sudoku game website that is created by
+      <strong>Naoufal el Bahja</strong>, Click the button bellow to select the
+      difficulty of your sudoku board, then enjoy playing!
+    </p>
+
+    <button
+      class="btn mt-2 btn-primary btn-lg btn-pill"
+      data-bs-toggle="modal"
+      data-bs-target="#difficulty-modal"
+    >
+      Select Difficulty
+    </button>
+  </div>
+</div>
+
+<app-modal name="difficulty-modal" size="sm" #difficultyModal>
+  <div class="modal-body">
+    <h3 class="modal-title">Select Difficulty</h3>
+
+    <div class="form-selectgroup form-selectgroup-boxes">
+      <label class="form-selectgroup-item w-100" *ngFor="let level of levels">
+        <input
+          type="radio"
+          name="level"
+          class="form-selectgroup-input"
+          [value]="level.name"
+          [(ngModel)]="selectedLevel"
+        />
+        <div class="form-selectgroup-label d-flex align-items-center p-3">
+          <div class="me-3">
+            <span class="form-selectgroup-check"></span>
+          </div>
+          <div class="text-capitalize">
+            {{ level.name }}
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      class="btn btn-primary w-100"
+      (click)="onPlay()"
+      [disabled]="!selectedLevel"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <line x1="15" y1="16" x2="19" y2="12" />
+        <line x1="15" y1="8" x2="19" y2="12" />
+      </svg>
+
+      Play
+    </button>
+  </div>
+</app-modal>

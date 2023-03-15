@@ -1,0 +1,20 @@
+<div
+  class="cell border h-100 position-relative user-select-none"
+  [class.cell-filled]="isFilled()"
+  [class.cell-selected]="isSelected()"
+  [class.cell-mistake]="isMistake()"
+  [class.cell-active]="isActive()"
+  [class.right-border]="squareRight()"
+  [class.bottom-border]="squareBottom()"
+  (click)="onSelect()"
+>
+  <span
+    class="position-absolute fs-2"
+    style="
+      transform: translate(-50%, -50%) !important;
+      top: 50% !important;
+      left: 50% !important;
+    "
+    >{{ cell }}</span
+  >
+</div>

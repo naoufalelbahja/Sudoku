@@ -1,0 +1,9 @@
+<div class="d-flex h-100">
+  <app-cell
+    class="w-100 h-100"
+    *ngFor="let cell of row; let x = index"
+    [cell]="cell"
+    [y]="y"
+    [x]="x"
+  ></app-cell>
+</div>

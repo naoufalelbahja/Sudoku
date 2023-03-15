@@ -1,0 +1,18 @@
+<app-modal name="end-game" size="sm" #endGameModal>
+  <div class="modal-body">
+    <h3 class="modal-title">Game Ended</h3>
+
+    <p class="m-0">
+      Congratulations, you solved a
+      <code class="text-capitalize">{{ level }}</code> Sudoku with
+      <code>{{ mistakes }}</code> Mistakes in <code>{{ time }}</code> seconds!
+    </p>
+  </div>
+
+  <div class="modal-footer flex-nowrap">
+    <button class="btn btn-outline-secondary w-100" (click)="onExit()">
+      Exit
+    </button>
+    <button class="btn btn-primary w-100" (click)="onReplay()">Replay</button>
+  </div>
+</app-modal>
